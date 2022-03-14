@@ -19,16 +19,20 @@ public class Artikal {
 		return sifra;
 	}
 	public void setKolicina(int kolicina) {
-		this.kolicina = kolicina;
+		if(kolicina>=0)
+			this.kolicina = kolicina;
 	}
 	public void setNaziv(String naziv) {
-		this.naziv = naziv;
+		if(naziv!=null && !naziv.equals(""))
+			this.naziv = naziv;
 	}
 	public void setOpis(String opis) {
-		this.opis = opis;
+		if(opis!=null && !opis.equals(""))
+			this.opis = opis;
 	}
 	public void setSifra(int sifra) {
-		this.sifra = sifra;
+		if(sifra>=0)
+			this.sifra = sifra;
 	}
 	@Override
 	public String toString() {
