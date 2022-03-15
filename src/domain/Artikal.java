@@ -36,8 +36,7 @@ public class Artikal {
 	}
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+		return "Sifra artikla: " + sifra + ", Naziv: " + naziv + ", Opis: " + opis + ", Kolicina: " + kolicina;
 	}
 	@Override
 	public int hashCode() {
