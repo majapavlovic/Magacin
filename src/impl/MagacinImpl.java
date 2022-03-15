@@ -13,9 +13,16 @@ public class MagacinImpl implements Magacin {
 	public MagacinImpl() {
 		lista = new ArrayList<>();
 	}
+
 	@Override
 	public void dodajArtikal(Artikal a) {
-		if (a != null && !lista.contains(a)) {
+		if (a != null) {
+			for (Artikal ar : lista) {
+				if (a.getSifra() == ar.getSifra()) {
+					ar.setKolicina(a.getKolicina() + a.getKolicina());
+					return;
+				}
+			}
 			lista.add(a);
 		}
 	}
@@ -32,6 +39,13 @@ public class MagacinImpl implements Magacin {
 				return a;
 		}
 		return null;
+	}
+
+	public void prikaziSve() {
+		for (Artikal a : lista) {
+			System.out.println(a.toString());
+		}
+
 	}
 
 }
